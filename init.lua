@@ -18,7 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "astrodark",
+  colorscheme = "kanagawa",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -80,5 +80,9 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    clipboard=unnamedplus
+    vim.g.copilot_assume_mapped = true
+    vim.g.copilot_no_tab_map = true
+    vim.api.nvim_set_keymap('i', '<C-]>', 'copilot#Accept("<CR>")', {expr=true, silent=true})
   end,
 }
